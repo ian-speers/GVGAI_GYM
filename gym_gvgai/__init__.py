@@ -22,7 +22,7 @@ for game in games:
 			name = game.split('_')[0]
 			version = int(game.split('_')[-1][1:])
 			if 'sokoban' in game:
-				print('register', 'name', name, 'version', version)
+				print('register', 'name', name, 'version', version, 'id', 'gvgai-{}-lvl{}-v{}'.format(name, lvl, version))
 			register(
 	    		id='gvgai-{}-lvl{}-v{}'.format(name, lvl, version),
 	    		entry_point='gym_gvgai.envs.gvgai_env:GVGAI_Env',
