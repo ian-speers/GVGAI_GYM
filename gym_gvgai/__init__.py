@@ -14,6 +14,8 @@ for game in games:
 	if(os.path.isdir(gamePath)):
 		#Currently if there are more than 5 levels, JavaServer.java will not load them. It expects lvl0 - lvl4.
 		lvls = len([lvl for lvl in os.listdir(gamePath) if 'lvl' in lvl])
+		if 'sokoban' in game:
+			print('\n\n\n\n\n', 'lvls', lvls)
 		for lvl in range(lvls):
 			#    for obs_type in ['image', 'json']:
 			# space_invaders should yield SpaceInvaders-v0 and SpaceInvaders-ram-v0
