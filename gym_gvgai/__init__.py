@@ -5,11 +5,12 @@ dir = os.path.dirname(__file__)
 gamesPath = os.path.join(dir, os.path.normpath('envs/games'))
 games = os.listdir(gamesPath)
 print('\n\n\n\n\n', 'gamesPath', gamesPath)
-print('\n\n\n\n\n', 'games', games)
+
 for game in games:
-	print('\n\n\n\n\n', 'for games', game)
 	gamePath = os.path.join(gamesPath, game)
-	print('\n\n\n\n\n', 'for gamePath', gamePath)
+	if 'sokoban' in game:
+		print('\n\n\n\n\n', 'for games', game)
+		print('\n\n\n\n\n', 'for gamePath', gamePath)
 	if(os.path.isdir(gamePath)):
 		#Currently if there are more than 5 levels, JavaServer.java will not load them. It expects lvl0 - lvl4.
 		lvls = len([lvl for lvl in os.listdir(gamePath) if 'lvl' in lvl])
